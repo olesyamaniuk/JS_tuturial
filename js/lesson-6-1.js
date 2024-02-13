@@ -542,5 +542,5 @@ console.table(items); // [ '🍎', '🍋', '🍇', '🍑' ]
 storage.addItem("🍌");
 console.table(storage.items); // [ '🍎', '🍋', '🍇', '🍑', '🍌' ]
 
-storage.removeItem("🍋");
-console.table(storage.items); // [ '🍎', '🍇', '🍑', '🍌' ]
+// storage.removeItem("🍋");
+// console.table(storage.items); // [ '🍎', '🍇', '🍑', '🍌' ]
