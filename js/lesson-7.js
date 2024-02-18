@@ -170,3 +170,100 @@ const markupe = newTechnologies
 
 listw.insertAdjacentHTML("beforeend", markupe);
 listw.insertAdjacentHTML("beforebegin", "<h2>Popular technologies</h2>");
+// ---------------------------------------------------------------------
+const buttonn = document.querySelector(".my-button");
+
+buttonn.addEventListener("click", () => {
+  console.log("The button was pressed and now the next image will appear");
+});
+
+const clickMe = document.querySelector(".js-click");
+const box = document.querySelector(".js-box");
+
+let mrgn = 0;
+function clickHandler(){
+    mrgn += 50;
+    box.style.margin = `${mrgn}px 0 0 ${mrgn}px`
+}
+
+
+clickMe.addEventListener('click', clickHandler)
+// clickMe.removeEventListener('click', clickHandler)
+buttonn.addEventListener('click', clickHandler)
+
+// buttonn.addEventListener("click", handleClick);
+// ----------------------------------------------------
+
+
+const keyContainer = document.querySelector('.key');
+
+function pressHandler(event){
+    if (event.key !== ' '){
+        keyContainer.textContent = event.key
+    }
+    else {
+        keyContainer.textContent = 'SPACE'; 
+    }
+       
+}
+
+function upHandler(){
+    keyContainer.textContent = null;
+}
+
+document.addEventListener('keydown', pressHandler)
+document.addEventListener('keyup', upHandler)
+// ----------------------------------------------------------------------------
+
+const userName = document.querySelector(".js-user-name");
+
+/**
+ * Користувач вводить в input своє ім'я після втрати
+ * фокусу отримує alert з повідомленням-привітанням
+ */
+
+function inputHandler(event){
+    console.dir(event.target.value)
+}
+
+function blurHandler(event){
+    const name = event.target.value;
+    alert(`Hello, ${name}`);
+}
+
+userName.addEventListener('input', inputHandler)
+userName.addEventListener('blur', blurHandler)
+// ----------------------------------------------------------------
+
+const form = document.querySelector(".js-form");
+
+function formHandler(event){
+    event.preventDefault();
+    const data = {
+        email: event.target.email.value,
+        password: event.target.password.value,
+        comment: event.target.comment.value
+    }
+
+    console.log(data);
+}
+
+form.addEventListener('submit', formHandler)
+// -----------------------------------------------
+const boxRef = document.querySelector(".js-box");
+
+
+boxRef.addEventListener('mousemove', event => {
+    console.log(event)
+})
+boxRef.addEventListener('mouseenter', event => {
+    console.log(event)
+})
+boxRef.addEventListener('mouseleave', event => {
+    console.log(event)
+})
+
+boxRef.addEventListener('mouseout', event => {
+    console.log(event)
+})
+// ---------------------------------------
