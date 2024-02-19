@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+    />
+    <title>Event bubbling</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      #parent,
+      #child,
+      #inner-child {
+        margin: 16px;
+        padding: 16px;
+        border: 1px solid #ffc107;
+        border-radius: 4px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 18px;
+      }
+
+      #parent {
+        background-color: #673ab7;
+      }
+
+      #child {
+        background-color: #448aff;
+      }
+
+      #inner-child {
+        background-color: #009688;
+      }
+
+      /* ------------------------------------------------------ */
+      .box {
+        width: 100px;
+        height: 100px;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .red {
+        background-color: red;
+      }
+
+      .green {
+        background-color: green;
+      }
+
+      .black {
+        background-color: black;
+      }
+
+      .box-red {
+        width: 300px;
+        height: 300px;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box-green {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 25px;
+      }
+
+      .box-black {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 25px;
+      }
+      /* ------------------------------------------ */
+      ul {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 25px;
+        user-select: none;
+        list-style: none;
+      }
+
+      .item {
+        list-style: none;
+        width: 250px;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        margin: 10px;
+      }
+
+      .item img {
+        width: 250px;
+        height: 300px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+
+      .item h2 {
+        font-size: 1.2rem;
+        margin: 0;
+      }
+
+      .item p {
+        font-size: 1rem;
+        margin: 5px 0;
+      }
+
+      .modal {
+        width: 500px;
+        padding: 20px;
+        user-select: none;
+        background-color: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .modal img {
+        max-width: 400px;
+        height: 500px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+
+      .modal h2 {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+
+      .modal h3 {
+        font-size: 1.2rem;
+        margin: 10px 0;
+      }
+
+      .modal p {
+        font-size: 1rem;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <p><a href="index.html">Go back</a></p>
+
+    <div id="parent">
+      PARENT
+      <div id="child">
+        CHILD
+        <div id="inner-child">INNER-CHILD</div>
+      </div>
+    </div>
+    <!-- ------------------------------------------------------ -->
+    <div class="container">
+      <div class="box red" data-color="red"></div>
+      <div class="box black" data-color="black"></div>
+      <div class="box green" data-color="green"></div>
+    </div>
+
+    <!-- --------------------------------------------- -->
+    <ul class="products">
+      <!-- <li class="item">
+        <img src="" alt="">
+        <h2></h2>
+        <p></p>
+      </li> -->
+    </ul>
+
+    <!-- <div class="modal">
+      <img src="" alt="">
+      <h2></h2>
+      <h3></h3>
+      <p></p>
+    </div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+
+    <script src="./js/lesson-8.js"></script>
+  </body>
+</html>
