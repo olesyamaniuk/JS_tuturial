@@ -145,3 +145,19 @@ if (rawData){
     form.name.value = data.username;
     form.message.value = data.message;
 }
+// -----------------------------------------------------------------------------------------------------------------------
+
+
+// const username = 'Alex';
+
+// try {
+//   username = 'Viktor';
+// }
+// catch {
+//   console.log('Error!')
+// }
+// finally {
+//   console.log('Always executes!')
+// }
+
+// console.log('End of code!')
