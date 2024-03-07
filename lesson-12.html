@@ -24,6 +24,44 @@
     </form>
 
     <div class="card-container"></div>
+
+
+
+     <!-- Форма запиту -->
+     <form class="form-inline search-formm">
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="searchQuery" class="sr-only">Що шукаємо?</label>
+        <input
+          type="text"
+          class="form-control"
+          name="query"
+          id="searchQuery"
+          placeholder="Що шукаємо?"
+          autocomplete="off"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary mb-2">Шукати</button>
+    </form>
+
+    <!-- Список статей -->
+    <ul class="articles"></ul>
+
+    <!-- Кнопка завантажити ще -->
+    <button
+      type="button"
+      class="btn btn-primary button is-hidden"
+      data-action="load-more"
+    >
+      <!-- Спінер -->
+      <span
+        class="spinner-border spinner-border-sm spinner is-hidden"
+        role="status"
+        aria-hidden="true"
+      ></span>
+
+      <span class="label">Показати ще</span>
+    </button>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/lesson-12.js"></script>
   </body>
