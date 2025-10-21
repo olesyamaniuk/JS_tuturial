@@ -1,6 +1,6 @@
 const  word = "hello world";
 console.log(word);
-
+console.log("hello world");
 let age = 25;
 age += 1;
 console.log(age)
@@ -12,7 +12,6 @@ age /= 2;
 console.log(age);
 age %= 3;
 console.log(age);
-
 
 const quantity = 17;
 console.log(typeof quantity); // виведе "number"
@@ -160,3 +159,63 @@ const elementWidth = (content, padding, border) => Number.parseFloat(content) + 
 console.log(elementWidth("50px", "8px", "4px")); // 74
 console.log(elementWidth("60px", "12px", "8.5px")); // 101
 console.log(elementWidth("200px", "0px", "0px")); // 200
+
+let ages = 24;
+console.log("Poly is " + ages + " years old!"); 
+const messages = "Poly is " + ages + " years old!";
+ages+=1;
+console.log("Poly is " + ages + " years old!"); 
+
+
+function makeTransaction(quantity, pricePerDroid){
+  const totalPrice = quantity * pricePerDroid;
+  return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
+
+}
+console.log(makeTransaction(5, 3000)); // "You ordered 5 droids worth 15000 credits!"
+console.log(makeTransaction(3, 1000)); // "You ordered 3 droids worth 3000 credits!"
+console.log(makeTransaction(10, 500)); // "You ordered 10 droids worth 5000 credits!"
+
+const totalPriceTwo = (quantity, pricePerDroid) => {
+  const totalPrice = quantity * pricePerDroid;
+  return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
+};
+console.log(totalPriceTwo(5, 3000)); 
+console.log(totalPriceTwo(3, 1000));
+console.log(totalPriceTwo(10, 500)); 
+
+function getShippingMessage(country, price, deliveryFee){
+  const totalPrice = price + deliveryFee;
+  return `Shipping to ${country} will cost  ${totalPrice} credits`;
+
+}
+console.log(getShippingMessage("Australia", 120, 50)); // "Shipping to Australia will cost 170 credits"
+console.log(getShippingMessage("Germany", 80, 20)); // "Shipping to Germany will cost 100 credits"
+console.log(getShippingMessage("Sweden", 100, 20)); // "Shipping to Sweden will cost 120 credits"
+
+const getShippingMessageTwo = (country, price, deliveryFee) => {
+  const totalPrice = price + deliveryFee;
+  return `Shipping to ${country} will cost  ${totalPrice} credits`;
+
+}
+console.log(getShippingMessageTwo("Australia", 120, 50)); // "Shipping to Australia will cost 170 credits"
+console.log(getShippingMessageTwo("Germany", 80, 20)); // "Shipping to Germany will cost 100 credits"
+console.log(getShippingMessageTwo("Sweden", 100, 20)); // "Shipping to Sweden will cost 120 credits"
+
+function getElementWidth (content, padding,  border){
+  const ElementWidth = Number.parseFloat(content) + 2 * Number.parseFloat(padding) + 2 * Number.parseFloat(border);
+  return  `${ElementWidth}px`;
+
+}
+console.log(getElementWidth("50px", "8px", "4px")); // 74
+console.log(getElementWidth("60px", "12px", "8.5px")); // 101
+console.log(getElementWidth("200px", "0px", "0px")); // 200
+
+
+const getElementWidthTwo = (content, padding,  border) => {
+ const ElementWidth = Number.parseFloat(content) + 2 * Number.parseFloat(padding) + 2 * Number.parseFloat(border);
+ return  `${ElementWidth}px`;
+}
+console.log(getElementWidthTwo("50px", "8px", "4px")); // 74
+console.log(getElementWidthTwo("60px", "12px", "8.5px")); // 101
+console.log(getElementWidthTwo("200px", "0px", "0px")); // 200
